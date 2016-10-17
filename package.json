@@ -1,5 +1,5 @@
 {
-  "name": "tarot-app",
+  "name": "soothsayr",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -36,6 +36,8 @@
   "dependencies": {
     "babel-polyfill": "^6.7.4",
     "react": "^15.0.2",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-addons-transition-group": "^15.3.2",
     "react-dom": "^15.0.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
