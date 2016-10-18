@@ -18,15 +18,9 @@ ActiveRecord::Schema.define(version: 20161018154812) do
   create_table "cards", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "image_path", null: false
-    t.text     "signifier",  null: false
-    t.text     "crossing",   null: false
-    t.text     "foundation", null: false
-    t.text     "past",       null: false
-    t.text     "crown",      null: false
-    t.text     "future",     null: false
-    t.text     "emotions",   null: false
-    t.text     "forces",     null: false
-    t.text     "desires",    null: false
+    t.text     "situation",  null: false
+    t.text     "danger",     null: false
+    t.text     "safety",     null: false
     t.text     "outcome",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
