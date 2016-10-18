@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: tarot-app_development
+  database: soothsayr_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: tarot-app_test
+  database: soothsayr_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: tarot-app_production
-  username: tarot-app
-  password: <%= ENV['TAROT-APP_DATABASE_PASSWORD'] %>
+  database: soothsayr_production
+  username: soothsayr
+  password: <%= ENV['SOOTHSAYR_DATABASE_PASSWORD'] %>
