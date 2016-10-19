@@ -24,7 +24,8 @@ class ReadingsController < ApplicationController
   def draw_cards(reading_id)
     reading_cards = Card.all.sample(4)
     reading_cards.each_with_index do |card, index|
-      Reveal.create!(card_id: card.id, reading_id: reading_id, position: index)
+      reveal = Reveal.new(card_id: card.id, reading_id: reading_id, position: index)
+      reveal.save
     end
   end
 
