@@ -6,7 +6,7 @@ class ReadingsController < ApplicationController
 
   def show
     @reading = Reading.find(params[:id])
-    @cards = Reveal.where(reading: @reading).order('position ASC')
+    @cards = @reading.cards.order('position ASC')
   end
 
   def create
