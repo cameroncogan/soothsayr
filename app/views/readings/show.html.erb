@@ -1,0 +1,17 @@
+<h5> The Situation </h5>
+<%= image_tag(@cards[0].image_path, height: 480, width: 286) %><br>
+<%= @cards[0].situation %>
+
+<h5> The Wrong Way </h5>
+<%= image_tag(@cards[1].image_path, height: 480, width: 286) %><br>
+<%= @cards[1].danger %>
+
+<h5> The Way Forward </h5>
+<%= image_tag(@cards[2].image_path, height: 480, width: 286) %><br>
+<%= @cards[2].safety %>
+
+<h5> What Will Be </h5>
+<%= image_tag(@cards[3].image_path, height: 480, width: 286) %><br>
+<%= @cards[3].outcome %>
+
+<%= button_to 'Get a new Reading', readings_path, method: :post %>
