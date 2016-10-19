@@ -6,19 +6,25 @@ class ReadingsController < ApplicationController
 
   def show
     @reading = Reading.find(params[:id])
+    @cards = Reveal.where(reading: @reading).order('position ASC')
   end
 
   def create
-    @reading = Reading.create!(user: current_user)
-    draw_cards(@reading.id)
+    @reading = Reading.new(user: current_user)
+    if @reading.save
+      draw_cards(@reading.id)
+      flash[:notice] = "Reading created"
+      redirect_to reading_path(@reading)
+    else
+      flash[:notice] = @reading.errors.full_messages.join(", ")
+      render :index
+    end
   end
 
   def draw_cards(reading_id)
     reading_cards = Card.all.sample(4)
-    assigned_cars = {}
-
-    reading_cards.each do |card|
-      Reveal.create!(card: card.id, reading: reading_id)
+    reading_cards.each_with_index do |card, index|
+      Reveal.create!(card_id: card.id, reading_id: reading_id, position: index)
     end
   end
 
