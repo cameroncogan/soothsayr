@@ -4,17 +4,16 @@ class ReadingsController < ApplicationController
 
   end
 
-  def show
-    @reading = Reading.find(params[:id])
-    @cards = @reading.cards.order('position ASC')
-  end
-
   def create
     @reading = Reading.new(user: current_user)
     if @reading.save
       draw_cards(@reading.id)
-      flash[:notice] = "Reading created"
-      redirect_to reading_path(@reading)
+      @cards = @reading.cards.order('position ASC')
+
+      respond_to do |format|
+        format.html
+        format.json { render json: @cards }
+      end
     else
       flash[:notice] = @reading.errors.full_messages.join(", ")
       render :index
@@ -28,7 +27,5 @@ class ReadingsController < ApplicationController
       reveal.save
     end
   end
-
-  private
 
 end

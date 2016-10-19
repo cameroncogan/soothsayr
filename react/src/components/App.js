@@ -1,46 +1,45 @@
 import React, { Component } from 'react';
+import Cards from './Cards';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {items: ['hello', 'world', 'click', 'me']};
-    this.handleAdd = this.handleAdd.bind(this);
+    this.state = {
+      cards: []
+    };
+
+    this.getCards = this.getCards.bind(this);
   }
 
-  handleAdd() {
-    var newItems = this.state.items.concat([
-      prompt('Enter some text')
-    ]);
-    this.setState({items: newItems});
-  }
-
-  handleRemove(i) {
-    var newItems = this.state.items.slice();
-    newItems.splice(i, 1);
-    this.setState({items: newItems});
+  getCards() {
+    let app = this;
+    $.ajax({
+      method: 'post',
+      url: '/figures.json',
+      contentType: 'application/json'
+    })
+    .done(function(data) {
+      app.setState({ cards: data });
+    });
   }
 
   render() {
-    var items = this.state.items.map((item, i) => (
-      <div key={item} onClick={() => this.handleRemove(i)}>
-        {item}
-      </div>
-    ));
+    let cards = this.state.cards
+    let cardsIndex = {}
+    for (var i = 0; i < cards.length; i++) {
+      let name = card.name;
+      cardsIndex.name = i;
+    };
 
     return (
       <div>
-        <button onClick={this.handleAdd}>Add Item</button>
-        <ReactCSSTransitionGroup
-          transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-          {items}
-        </ReactCSSTransitionGroup>
+        <Cards cards={cards} cardsIndex={cardsIndex}/>
+        <button onClick={this.getCards}>'Start a new Reading'</button>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
