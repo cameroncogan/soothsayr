@@ -2,23 +2,25 @@ import React from 'react';
 
 const Card = props => {
   let name = props.name;
-  let image_path = props.image_path;
+  let id = props.id;
+  let image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path
+
 
   let prophecy;
     if (props.index === 0) {
-      props.situation;
+      prophecy = props.situation;
     } else if (props.index === 1) {
-      props.danger;
+      prophecy = props.danger;
     } else if (props.index === 2) {
-      props.safety;
+      prophecy = props.safety;
     } else if (props.index === 3) {
-      props.outcome;
+      prophecy = props.outcome;
     };
 
   return (
-    <li>
-      <img src={image_path}><br>
-      {prophecy}
+    <li className='cardItem col-sm-3'>
+      <img src={image_path} className='card img-rounded img-responsive'></img>
+      <p>{prophecy}</p>
     </li>
   );
 };

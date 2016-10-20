@@ -7,7 +7,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: []
+      cards: [],
+      showCards: []
     };
 
     this.getCards = this.getCards.bind(this);
@@ -15,9 +16,10 @@ class App extends React.Component {
 
   getCards() {
     let app = this;
+    app.setState({ cards: [] });
     $.ajax({
       method: 'post',
-      url: '/figures.json',
+      url: '/readings.json',
       contentType: 'application/json'
     })
     .done(function(data) {
@@ -27,16 +29,11 @@ class App extends React.Component {
 
   render() {
     let cards = this.state.cards
-    let cardsIndex = {}
-    for (var i = 0; i < cards.length; i++) {
-      let name = card.name;
-      cardsIndex.name = i;
-    };
 
     return (
       <div>
-        <Cards cards={cards} cardsIndex={cardsIndex}/>
-        <button onClick={this.getCards}>'Start a new Reading'</button>
+        <h5 id="readingStart" className="text-center" onClick={this.getCards}>Start a new Reading</h5>
+        <Cards cards={cards} />
       </div>
     );
   };

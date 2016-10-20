@@ -2,9 +2,8 @@ import React from 'react';
 import Card from './Card';
 
 const Cards = props => {
+  let i = 0;
   let cards = props.cards.map(card => {
-    let name = card.name
-    let index = cardsIndex.name
 
     return(
       <Card
@@ -16,16 +15,20 @@ const Cards = props => {
         danger={card.danger}
         safety={card.safety}
         outcome={card.outcome}
-        index={index}
+        index={i}
       />
     );
+    console.log(i);
+    i++;
   })
 
   return(
-    <div>
-      <ul>
-        {cards}
-      </ul>
+    <div className='container-fluid'>
+      <div className='row'>
+        <ul>
+          {cards}
+        </ul>
+      </div>
     </div>
   )
 }
