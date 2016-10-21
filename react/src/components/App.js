@@ -9,10 +9,12 @@ class App extends React.Component {
     this.state = {
       cards: [],
       showCards: [],
-      gotCards: false
+      cardHelper: 'text',
+      storyStage: 0
     };
 
     this.getCards = this.getCards.bind(this);
+    this.addCard = this.addCard.bind(this);
   }
 
   getCards() {
@@ -26,15 +28,33 @@ class App extends React.Component {
     .done(function(data) {
       app.setState({ cards: data });
     });
-  }
+  };
+
+  addCard() {
+    let nextShowCards = this.state.showCards;
+    nextShowCards.push(this.state.cards.shift());
+    console.log(nextShowCards);
+    this.setState({ showCards: nextShowCards });
+  };
 
   render() {
     let cards = this.state.cards;
+    let showCards = this.state.showCards;
+    let cardOnClick;
+    let buttonText;
+      if (this.state.cards.length < 1) {
+        cardOnClick = this.getCards;
+        buttonText = 'Click to start a new reading'
+      } else {
+        cardOnClick = this.addCard;
+        buttonText = 'Click for next card'
+      }
+
 
     return (
       <div>
-        <p id="readingStart" className="text-center" onClick={this.getCards}>Begin a Reading</p>
-        <Cards cards={cards} />
+        <p id="readingButton" className="text-center" onClick={cardOnClick}>{buttonText}</p>
+        <Cards cards={showCards} />
       </div>
     );
   };

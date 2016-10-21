@@ -4,9 +4,9 @@ import Card from './Card';
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 const Cards = props => {
-  let i = 0;
+  let i = -1;
   let cards = props.cards.map(card => {
-
+    i++;
     return(
       <Card
         key={card.id}
@@ -20,8 +20,6 @@ const Cards = props => {
         index={i}
       />
     );
-    console.log(i);
-    i++;
   })
 
   return(
