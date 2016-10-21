@@ -8,7 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       cards: [],
-      showCards: []
+      showCards: [],
+      gotCards: false
     };
 
     this.getCards = this.getCards.bind(this);
@@ -28,11 +29,11 @@ class App extends React.Component {
   }
 
   render() {
-    let cards = this.state.cards
+    let cards = this.state.cards;
 
     return (
       <div>
-        <h5 id="readingStart" className="text-center" onClick={this.getCards}>Start a new Reading</h5>
+        <p id="readingStart" className="text-center" onClick={this.getCards}>Begin a Reading</p>
         <Cards cards={cards} />
       </div>
     );

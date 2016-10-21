@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
 
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
 const Cards = props => {
   let i = 0;
   let cards = props.cards.map(card => {
@@ -26,7 +28,12 @@ const Cards = props => {
     <div className='container-fluid'>
       <div className='row'>
         <ul>
-          {cards}
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+            {cards}
+        </ReactCSSTransitionGroup>
         </ul>
       </div>
     </div>
