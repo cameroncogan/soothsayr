@@ -1,0 +1,25 @@
+#logo {
+  font-family: 'Ruslan Display', cursive;
+  font-size: 30px;
+}
+
+.card {
+  height: 480px;
+  width: 286px;
+}
+
+
+body {
+  background-image: url(https://s3.amazonaws.com/soothsayr/background.jpg);
+  font-family: 'Cinzel', serif;
+}
+
+p {
+  color: white;
+}
+
+#readingStart {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
