@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cards from './Cards';
 import Transition from './Transition';
+import Button from './Button';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
@@ -60,33 +61,16 @@ class App extends React.Component {
     let shownCards = this.state.shownCards;
     let currentCard = this.state.currentCard;
     let storyStage = this.state.storyStage;
-    let flavorText;
-      if (storyStage === 0) {
-        flavorText = this.state.flavorText.intro;
-      } else if (storyStage === 1) {
-        flavorText = this.state.flavorText.preFirst;
-      } else if (storyStage === 2) {
-        flavorText = this.state.flavorText.preSecond;
-      } else if (storyStage === 3) {
-        flavorText = this.state.flavorText.preThird;
-      } else if (storyStage === 4) {
-        flavorText = this.state.flavorText.preFourth;
-      };
-    let cardOnClick;
-    let buttonText;
-      if (this.state.cards.length < 1) {
-        cardOnClick = this.getCards;
-        buttonText = 'Click to start a new reading'
-      } else {
-        cardOnClick = this.addCard;
-        buttonText = 'Click for next card'
-      }
-
+    let flavorText = this.state.flavorText;
+    let onClickEmpty = this.getCards;
+    let onClickNotEmpty = this.addCard;
+    let buttonTextEmpty = 'Click to start a new reading';
+    let buttonTextNotEmpty = 'Click for next card';
 
     return (
       <div>
-        <p id="readingButton" className="text-center" onClick={cardOnClick}>{buttonText}</p>
-        <Transition flavorText={flavorText} onClick={this.handleStoryChange} />
+        <Button cards={cards} onClickEmpty={onClickEmpty} onClickNotEmpty={onClickNotEmpty} buttonTextEmpty={buttonTextEmpty} buttonTextNotEmpty={buttonTextNotEmpty} />
+        <Transition flavorText={flavorText} storyStage={storyStage} onClick={this.handleStoryChange} />
         <Cards cards={currentCard} />
       </div>
     );

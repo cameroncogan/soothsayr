@@ -1,10 +1,21 @@
 import React from 'react';
 
-const Transition = props => {
-  let text = props.flavorText;
-  console.log(text);
+function Transition(props) {
+  const FlavorText = props.flavorText
   let onClick = props.onClick;
-  console.log(onClick);
+  let storyStage = props.storyStage;
+  let text;
+    if (storyStage === 0) {
+      text = FlavorText.intro;
+    } else if (storyStage === 1) {
+      text = FlavorText.preFirst;
+    } else if (storyStage === 2) {
+      text = FlavorText.preSecond;
+    } else if (storyStage === 3) {
+      text = FlavorText.preThird;
+    } else if (storyStage === 4) {
+      text = FlavorText.preFourth;
+    };
 
   return (
     <div>
@@ -12,6 +23,5 @@ const Transition = props => {
     </div>
   );
 };
-
 
 export default Transition;
