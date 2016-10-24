@@ -32,8 +32,10 @@ function Transition(props) {
 
   if (text != '') {
     return (
-      <div>
-        <p className="flavorText" onClick={onClick}>{text}</p>
+      <div className='container'>
+        <div className='row'>
+          <p className="transition col-lg-12" onClick={onClick}>{text}</p>
+        </div>
       </div>
     );
   } else {

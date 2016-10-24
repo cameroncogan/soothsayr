@@ -90,6 +90,15 @@ class App extends React.Component {
     let getCards = this.getCards;
     let addCard = this.addCard;
     let handleStoryChange = this.handleStoryChange;
+    let cardProphecyContainerClass;
+    let cardProphecyRowClass;
+      if (storyStage === 10) {
+        cardProphecyContainerClass = '';
+        cardProphecyRowClass = '';
+      } else {
+        cardProphecyContainerClass = 'Container';
+        cardProphecyRowClass = 'Row';
+      };
 
     return (
       <div>
@@ -97,21 +106,32 @@ class App extends React.Component {
           storyStage={storyStage}
           onClick={getCards}
         />
-        <Transition
-          storyStage={storyStage}
-          onTransitionClick={handleStoryChange}
-          onCardClick={addCard}
-        />
-        <Cards
-          cards={passedCards}
-          storyStage={storyStage}
-          onClick={handleStoryChange}
-        />
-        <Prophecies
-          prophecies={passedProphecies}
-          storyStage={storyStage}
-          onClick={handleStoryChange}
-        />
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+          <div>
+            <Transition
+              storyStage={storyStage}
+              onTransitionClick={handleStoryChange}
+              onCardClick={addCard}
+            />
+          </div>
+        </ReactCSSTransitionGroup>
+        <div className={cardProphecyContainerClass}>
+          <div className={cardProphecyRowClass}>
+            <Cards
+              cards={passedCards}
+              storyStage={storyStage}
+              onClick={handleStoryChange}
+            />
+            <Prophecies
+              prophecies={passedProphecies}
+              storyStage={storyStage}
+              onClick={handleStoryChange}
+            />
+          </div>
+        </div>
       </div>
     );
   };

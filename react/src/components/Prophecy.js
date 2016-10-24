@@ -4,12 +4,18 @@ function Prophecy(props) {
   let prophecy = props.prophecy;
   let storyStage = props.storyStage;
   let onClick = props.onClick;
-  let storyArray = [2, 4, 6, 8, 10];
+  let storyArray = [2, 4, 6, 8];
 
   if (storyArray.includes(storyStage)) {
     return (
+      <li className='container-fluid col-lg-6'>
+        <p className="prophecy text-center" onClick={onClick}>{prophecy}</p>
+      </li>
+    );
+  } else if (storyStage === 10) {
+    return (
       <li>
-        <p className="prophecy" onClick={onClick}>{prophecy}</p>
+        <p className="prophecy-sum text-center" onClick={onClick}>{prophecy}</p>
       </li>
     );
   } else {

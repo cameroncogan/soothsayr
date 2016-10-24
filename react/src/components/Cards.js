@@ -16,18 +16,14 @@ const Cards = props => {
   })
 
   return (
-    <div className='container-fluid'>
-      <div className='row'>
-        <ul>
-        <ReactCSSTransitionGroup
-          transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-            {cards}
-        </ReactCSSTransitionGroup>
-        </ul>
-      </div>
-    </div>
+    <ul className="cardDiv">
+      <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}>
+          {cards}
+      </ReactCSSTransitionGroup>
+    </ul>
   )
 }
 
