@@ -25,6 +25,7 @@ function Transition(props) {
       text = FlavorText.preFourth;
     } else if (storyStage === 9) {
       text = FlavorText.outro;
+      onClick = props.onTransitionClick;
     } else {
       text = '';
     };

@@ -54,6 +54,12 @@ class App extends React.Component {
     let shownCards = this.state.shownCards;
     let currentCard = this.state.currentCard;
     let storyStage = this.state.storyStage;
+    let passedCards;
+      if (storyStage === 10) {
+        passedCards = shownCards;
+      } else {
+        passedCards = currentCard;
+      };
     let flavorText = this.state.flavorText;
     let getCards = this.getCards;
     let addCard = this.addCard;
@@ -72,7 +78,7 @@ class App extends React.Component {
           onCardClick={addCard}
         />
         <Cards
-          cards={currentCard}
+          cards={passedCards}
           storyStage={storyStage}
           onClick={handleStoryChange}
         />

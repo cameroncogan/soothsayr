@@ -25,12 +25,18 @@ function Card(props) {
         <img src={image_path} className='card img-rounded img-responsive'></img>
         <p onClick={onClick}>{prophecy}</p>
       </li>
-    )
+    );
+  } else if (storyStage === 10) {
+    return (
+      <li className='cardItem col-sm-3'>
+        <img src={image_path} className='card img-rounded img-responsive'></img>
+      </li>
+    );
   } else {
     return (
       null
-    )
-  }
+    );
+  };
 };
 
 

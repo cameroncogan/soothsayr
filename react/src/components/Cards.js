@@ -24,7 +24,7 @@ const Cards = props => {
     );
   })
 
-  return(
+  return (
     <div className='container-fluid'>
       <div className='row'>
         <ul>
