@@ -1,22 +1,23 @@
 import React from 'react';
 
 function Button(props) {
-  let textEmpty = props.buttonTextEmpty;
-  let textNotEmpty = props.buttonTextNotEmpty;
-  let onClickEmpty = props.onClickEmpty;
-  let onClickNotEmpty = props.onClickNotEmpty;
+  let textGetCards = props.buttonText.get;
+  let textAddCard = props.buttonText.add;
+  let onClickGetCards = props.onButtonClick.get;
+  let onClickAddCard = props.onButtonClick.add;
+  let storyStage = props.storyStage;
 
   const CardArray = props.cards;
-  if (props.cards.length < 1) {
+  if (storyStage < 1) {
     return (
       <div>
-        <p id="readingButton" className="text-center" onClick={onClickEmpty}>{textEmpty}</p>
+        <p id="readingButton" className="text-center" onClick={onClickGetCards}>{textGetCards}</p>
       </div>
     )
   } else {
     return (
       <div>
-        <p id="readingButton" className="text-center" onClick={onClickNotEmpty}>{textNotEmpty}</p>
+        <p id="readingButton" className="text-center" onClick={onClickAddCard}>{textAddCard}</p>
       </div>
     )
   }

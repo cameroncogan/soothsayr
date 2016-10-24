@@ -25,6 +25,7 @@ class App extends React.Component {
     this.getCards = this.getCards.bind(this);
     this.addCard = this.addCard.bind(this);
     this.handleStoryChange = this.handleStoryChange.bind(this);
+    this.handleTransitionClick = this.handleTransitionClick.bind(this);
   }
 
   getCards() {
@@ -37,6 +38,7 @@ class App extends React.Component {
     })
     .done(function(data) {
       app.setState({ cards: data });
+      app.handleStoryChange();
     });
   };
 
@@ -52,8 +54,13 @@ class App extends React.Component {
 
   handleStoryChange() {
     let newStoryStage = this.state.storyStage;
+    console.log(newStoryStage);
     newStoryStage += 1;
     this.setState({ storyStage: newStoryStage });
+  }
+
+  handleTransitionClick() {
+    this.handleStoryChange();
   }
 
   render() {
@@ -62,14 +69,12 @@ class App extends React.Component {
     let currentCard = this.state.currentCard;
     let storyStage = this.state.storyStage;
     let flavorText = this.state.flavorText;
-    let onClickEmpty = this.getCards;
-    let onClickNotEmpty = this.addCard;
-    let buttonTextEmpty = 'Click to start a new reading';
-    let buttonTextNotEmpty = 'Click for next card';
+    let onButtonClick = {get: this.getCards, add: this.addCard};
+    let buttonText = {get: 'Click to start a new reading', add: 'Click for next card'};
 
     return (
       <div>
-        <Button cards={cards} onClickEmpty={onClickEmpty} onClickNotEmpty={onClickNotEmpty} buttonTextEmpty={buttonTextEmpty} buttonTextNotEmpty={buttonTextNotEmpty} />
+        <Button cards={cards} storyStage={storyStage} onButtonClick={onButtonClick} buttonText={buttonText} />
         <Transition flavorText={flavorText} storyStage={storyStage} onClick={this.handleStoryChange} />
         <Cards cards={currentCard} />
       </div>
