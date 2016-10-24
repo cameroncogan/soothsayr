@@ -13,24 +13,15 @@ class App extends React.Component {
       shownCards: [],
       currentCard: [],
       storyStage: -1,
-      flavorText: {
-        intro: 'Begin with a thought. What does your mind naturally turn to?',
-        preFirst: 'The first card represents the situation at hand. Consider how it could apply to your life...',
-        preSecond: 'The second card represents the wrong path. Consider it a warning...',
-        preThird: 'The third card represents the way forward. Follow it, to find your way...',
-        preFourth: 'The final card represents what will be, though the future is not set in stone...'
-      }
     };
 
     this.getCards = this.getCards.bind(this);
     this.addCard = this.addCard.bind(this);
     this.handleStoryChange = this.handleStoryChange.bind(this);
-    this.handleTransitionClick = this.handleTransitionClick.bind(this);
   }
 
   getCards() {
     let app = this;
-    app.setState({ cards: [] });
     $.ajax({
       method: 'post',
       url: '/readings.json',
@@ -54,13 +45,8 @@ class App extends React.Component {
 
   handleStoryChange() {
     let newStoryStage = this.state.storyStage;
-    console.log(newStoryStage);
     newStoryStage += 1;
     this.setState({ storyStage: newStoryStage });
-  }
-
-  handleTransitionClick() {
-    this.handleStoryChange();
   }
 
   render() {
@@ -69,14 +55,27 @@ class App extends React.Component {
     let currentCard = this.state.currentCard;
     let storyStage = this.state.storyStage;
     let flavorText = this.state.flavorText;
-    let onButtonClick = {get: this.getCards, add: this.addCard};
-    let buttonText = {get: 'Click to start a new reading', add: 'Click for next card'};
+    let getCards = this.getCards;
+    let addCard = this.addCard;
+    let handleStoryChange = this.handleStoryChange;
 
     return (
       <div>
-        <Button cards={cards} storyStage={storyStage} onButtonClick={onButtonClick} buttonText={buttonText} />
-        <Transition flavorText={flavorText} storyStage={storyStage} onClick={this.handleStoryChange} />
-        <Cards cards={currentCard} />
+        <Button
+          cards={cards}
+          storyStage={storyStage}
+          onClick={getCards}
+        />
+        <Transition
+          storyStage={storyStage}
+          onTransitionClick={handleStoryChange}
+          onCardClick={addCard}
+        />
+        <Cards
+          cards={currentCard}
+          storyStage={storyStage}
+          onClick={handleStoryChange}
+        />
       </div>
     );
   };

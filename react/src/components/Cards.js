@@ -18,6 +18,8 @@ const Cards = props => {
         safety={card.safety}
         outcome={card.outcome}
         index={i}
+        storyStage={props.storyStage}
+        onClick={props.onClick}
       />
     );
   })
