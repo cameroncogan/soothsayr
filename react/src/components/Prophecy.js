@@ -15,7 +15,7 @@ function Prophecy(props) {
   } else if (storyStage === 10) {
     return (
       <li>
-        <p className="prophecy-sum text-center" onClick={onClick}>{prophecy}</p>
+        <p className="prophecy-sum text-center glow-red" onClick={onClick}>{prophecy}</p>
       </li>
     );
   } else {

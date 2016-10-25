@@ -19,16 +19,18 @@ const Prophecies = props => {
 
   if (storyStage === 10) {
     return (
-      <div className='container proph-div-sum'>
-        <div className='row'>
-          <ul className='prophecies'>
-          <ReactCSSTransitionGroup
-            transitionName="example"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
-              {prophecies}
-          </ReactCSSTransitionGroup>
-          </ul>
+      <div className='container'>
+        <div className="row">
+          <div className="col-lg-12">
+            <ul className='prophecies-sum'>
+            <ReactCSSTransitionGroup
+              transitionName="example"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+                {prophecies}
+            </ReactCSSTransitionGroup>
+            </ul>
+          </div>
         </div>
       </div>
     )

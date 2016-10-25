@@ -7,14 +7,14 @@ function Card(props) {
 
   if (storyArray.includes(storyStage)) {
     return (
-      <li className='col-md-4 col-md-offset-2'>
+      <li className='col-md-4 col-md-offset-1'>
         <img src={image_path} className='card img-rounded'></img>
       </li>
     );
   } else if (storyStage === 10) {
     return (
       <li>
-        <img src={image_path} className='col-sm-2 card-sum img-rounded'></img>
+        <img src={image_path} className='col-sm-3 card-sum img-rounded'></img>
       </li>
     );
   } else {
