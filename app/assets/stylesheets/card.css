@@ -1,11 +1,19 @@
 #logo {
-  font-family: 'Ruslan Display', cursive;
-  font-size: 30px;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 60px;
+  color: #2D2D2D;
+  text-shadow: 0px 0px 10px #2D2D2D;
 }
 
 .card {
-  height: 720px;
-  width: 429px;
+  height: 576px;
+  width: 343px;
+  box-shadow: 0px 0px 30px white;
+}
+
+.glow {
+  color: white;
+  text-shadow: 0px 0px 10px white;
 }
 
 .card-sum {
@@ -13,6 +21,17 @@
   width: 286px;
   margin: 5px;
   display: inline-flex;
+}
+
+.navbar-inner {
+  background: transparent;
+}
+
+.navbar {
+  background: transparent;
+  border: none;
+  margin: 30px;
+  font-family: 'Cinzel', serif;
 }
 
 .prophecy {
@@ -43,7 +62,14 @@
 
 body {
   background-image: url(https://s3.amazonaws.com/soothsayr/background.jpg);
-  font-family: 'Cinzel', serif;
+  font-family: 'IM Fell English SC', serif;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
   list-style: none;
 }
 

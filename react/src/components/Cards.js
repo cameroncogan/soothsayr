@@ -16,7 +16,7 @@ const Cards = props => {
   })
 
   return (
-    <ul className="cardDiv">
+    <ul>
       <ReactCSSTransitionGroup
         transitionName="example"
         transitionEnterTimeout={500}

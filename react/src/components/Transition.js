@@ -34,7 +34,7 @@ function Transition(props) {
     return (
       <div className='container'>
         <div className='row'>
-          <p className="transition col-lg-12" onClick={onClick}>{text}</p>
+          <p className="transition col-lg-12 glow" onClick={onClick}>{text}</p>
         </div>
       </div>
     );

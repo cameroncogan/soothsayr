@@ -8,7 +8,7 @@ function Prophecy(props) {
 
   if (storyArray.includes(storyStage)) {
     return (
-      <li className='container-fluid col-lg-6'>
+      <li className='col-md-6'>
         <p className="prophecy text-center" onClick={onClick}>{prophecy}</p>
       </li>
     );
