@@ -16,11 +16,19 @@
   text-shadow: 0px 0px 10px white;
 }
 
+.glow-red {
+    color: red;
+    text-shadow: 0px 0px 30px red;
+  }
+
 .card-sum {
-  height: 480px;
-  width: 286px;
-  margin: 5px;
-  display: inline-flex;
+  height: 384px;
+  width: 240px;
+}
+
+.card-container {
+  margin: auto;
+  max-width: 100%;
 }
 
 .navbar-inner {
@@ -41,17 +49,15 @@
 
 .prophecy-sum {
   font-size: 24px;
-  color: red;
+  margin: 2px;
 }
 
 .prophecies {
   margin-top: 20px;
 }
 
-.proph-div-sum {
-  float: none;
-  margin: 30px;
-  display: block;
+.prophecies-sum {
+  margin-top: 30px;
 }
 
 .transition {
