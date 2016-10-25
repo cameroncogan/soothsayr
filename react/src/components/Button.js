@@ -8,7 +8,7 @@ function Button(props) {
   if (storyStage === -1) {
     return (
       <div>
-        <p id="readingButton" className="text-center" onClick={onClick}>{text}</p>
+        <p id="readingButton" className="text-center glow" onClick={onClick}>{text}</p>
       </div>
     )
   } else {

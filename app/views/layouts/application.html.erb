@@ -6,30 +6,30 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png"/>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Ruslan+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|IM+Fell+English+SC|IM+Fell+French+Canon+SC" rel="stylesheet">
   </head>
 
   <body>
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" id='logo' href="/readings">soothsayr</a>
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" id='logo' href="/readings">SOOTHSAYR</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <%- if user_signed_in? -%>
+              <li><%= link_to 'PROFILE', user_path(current_user), id: 'navItem' %></li>
+              <li><%= link_to 'SIGN OUT', destroy_user_session_path, { id: 'navItem', method: :delete } %></li>
+            <%- else -%>
+              <li class="navItem"> <%= link_to 'SIGN IN', new_user_session_path, id: 'navItem' %></li>
+              <li class="navItem"> <%= link_to 'SIGN UP', new_user_registration_path, id: 'navItem' %></li>
+            <% end %>
+          </ul>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <%- if user_signed_in? -%>
-            <li><%= link_to 'Profile', user_path(current_user) %></li>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-          <%- else -%>
-            <li> <%= link_to 'Sign In', new_user_session_path  %></li>
-            <li> <%= link_to 'Sign Up', new_user_registration_path  %></li>
-          <% end %>
-        </ul>
       </div>
     </nav>
 
-    <% flash.each do |key, value| %>
-      <p id="flash"><%=value%></p>
-    <% end %>
     <%= yield %>
+
   </body>
 </html>

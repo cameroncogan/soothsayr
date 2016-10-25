@@ -7,7 +7,7 @@ function Card(props) {
 
   if (storyArray.includes(storyStage)) {
     return (
-      <li className='col-lg-6'>
+      <li className='col-md-4 col-md-offset-2'>
         <img src={image_path} className='card img-rounded'></img>
       </li>
     );
