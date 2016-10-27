@@ -7,7 +7,7 @@
     <ul>
       <% @readings.each do |reading| %>
         <% link = reading_path(reading) %>
-        <li class="col-md-4 col-centered"><a id="readingLink" href=<%=link%>><%= reading.created_at.strftime("%m/%d/%Y")%><br>
+        <li class="col-md-4 col-centered sum-text"><a id="readingLink" href=<%=link%>><%= reading.created_at.strftime("%m/%d/%Y")%><br>
         The situation:<br>
         <%= reading.cards.first.situation %></a></li>
       <% end %>
