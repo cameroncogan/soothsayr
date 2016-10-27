@@ -117,14 +117,17 @@ class App extends React.Component {
 
   sendDeckData() {
     let app = this;
-    this.getUserId();
-    let userId = app.state.user_id;
+    let userId = app.state.userId;
     $.ajax({
-      method: 'post',
-      url: '/users/' + userId + '.json',
-      contentType: 'application/json',
-      data: "deck_choice=" + app.state.deckChoice
+      method: 'patch',
+      url: '/users/' + userId,
+      dataType: 'json',
+      data: { deck_choice: app.state.deckChoice }
     })
+  };
+
+  componentDidMount() {
+    this.getUserId();
   };
 
   getUserId() {

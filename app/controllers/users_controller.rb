@@ -13,12 +13,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    @deck_choice = params[:deck_choice]
+    @deck_choice = params['deck_choice']
     @user = current_user
-    binding.pry
     @user.deck = @deck_choice
     @user.save
-    binding.pry
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:deck_choice)
   end
 
 end
