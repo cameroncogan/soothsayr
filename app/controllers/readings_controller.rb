@@ -1,9 +1,9 @@
 class ReadingsController < ApplicationController
+  before_action :authorize_user
 
   def index
 
   end
-
 
   def show
     @user = current_user
@@ -32,6 +32,15 @@ class ReadingsController < ApplicationController
     reading_cards.each_with_index do |card, index|
       reveal = Reveal.new(card_id: card.id, reading_id: reading_id, position: index)
       reveal.save
+    end
+  end
+
+  private
+
+  def authorize_user
+    if !user_signed_in?
+      flash[:notice] = 'Please sign in to continue'
+      redirect_to new_user_session_path
     end
   end
 

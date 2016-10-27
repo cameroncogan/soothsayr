@@ -239,7 +239,7 @@ class App extends React.Component {
             </div>
           </ReactCSSTransitionGroup>
           <div className='container'>
-            <div className='row'>
+            <div className='row row-centered proph-card'>
               <Cards
                 cards={passedCards}
                 storyStage={storyStage}

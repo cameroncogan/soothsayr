@@ -41,7 +41,7 @@ const Cards = props => {
   } else if (storyStage === 10) {
     return (
       <div className='container'>
-        <div className='row row-centered'>
+        <div className='row'>
           <ul>
             <ReactCSSTransitionGroup
               transitionName="example"

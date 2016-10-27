@@ -12,6 +12,19 @@
   padding: 0px;
 }
 
+.card:hover {
+  -moz-transform: scale(1.10);
+  -webkit-transform: scale(1.10);
+  -o-transform: scale(1.10);
+  -ms-transform: scale(1.10);
+  -webkit-transform: scale(1.10);
+  transform: scale(1.10);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition:transform 1.05s ease-in-out;
+  -ms-transition:transform 1.05s ease-in-out;
+}
+
 .card-glow {
   box-shadow: 0px 0px 30px white;
 }
@@ -25,15 +38,33 @@
   box-shadow: 0px 0px 30px white;
 }
 
+.proph-card {
+  margin-top: 40px;
+}
+
 .glow-red {
-    color: red;
-    text-shadow: 0px 0px 30px red;
-  }
+  color: red;
+  text-shadow: 0px 0px 30px red;
+}
 
 .card-sum {
   height: 384px;
   width: 240px;
   padding: 0px;
+  margin-left: 5px;
+}
+
+.card-sum:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition: transform 1.05s ease-in-out;
+  -ms-transition: transform 1.05s ease-in-out;
 }
 
 .card-container {
@@ -52,14 +83,49 @@
   font-family: 'Cinzel', serif;
 }
 
+.submit-button {
+  color: black;
+  margin: 20px;
+}
+
 .prophecy {
   font-size: 42px;
   margin-top: 100px;
 }
 
+input {
+  color: black;
+}
+
+.prophecy:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition: transform 1.05s ease-in-out;
+  -ms-transition: transform 1.05s ease-in-out;
+}
+
 .prophecy-sum {
   font-size: 24px;
   margin: 2px;
+}
+
+.prophecy-sum:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition: transform 1.05s ease-in-out;
+  -ms-transition: transform 1.05s ease-in-out;
 }
 
 .prophecies {
@@ -79,6 +145,7 @@
 body {
   background-image: url(https://s3.amazonaws.com/soothsayr/background.jpg);
   font-family: 'IM Fell English SC', serif;
+  color: #F0F0F0;
 }
 
 ul {
@@ -120,11 +187,11 @@ a.li {
 
 .sum-text {
   font-size: 24px;
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 
 .sum-text-list {
-  margin: 30px 0px;
+  margin: 15px;
 }
 
 .row-centered {
@@ -138,5 +205,5 @@ a.li {
 }
 
 .show-reading {
-  margin-top: 30px;
+  margin: 30px;
 }

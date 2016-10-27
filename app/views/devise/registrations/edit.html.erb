@@ -1,8 +1,8 @@
-<div class="center">
+<div class="text-center">
   <% flash.each do |key, value| %>
     <p id="flash"><%=value%></p>
   <% end %>
-  
+
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -36,7 +36,7 @@
       <%= f.password_field :current_password, autocomplete: "off" %>
     </div>
 
-    <div class="actions">
+    <div class="actions submit-button">
       <%= f.submit "Update" %>
     </div>
   <% end %>
