@@ -9,11 +9,20 @@
   height: 576px;
   width: 343px;
   box-shadow: 0px 0px 30px white;
+  padding: 0px;
+}
+
+.card-glow {
+  box-shadow: 0px 0px 30px white;
 }
 
 .glow {
   color: white;
   text-shadow: 0px 0px 10px white;
+}
+
+.glow-card {
+  box-shadow: 0px 0px 30px white;
 }
 
 .glow-red {
@@ -24,6 +33,7 @@
 .card-sum {
   height: 384px;
   width: 240px;
+  padding: 0px;
 }
 
 .card-container {
@@ -88,4 +98,45 @@ p {
   text-decoration: none;
   color: white;
   margin-top: 150px;
+}
+
+.profilePriorReading {
+  margin-left: 40px;
+}
+
+.thumbnail {
+  margin-left: 10px;
+}
+
+#readingLink {
+  text-decoration: none;
+  color: red;
+  text-shadow: 0px 0px 30px red;
+}
+
+a.li {
+  text-decoration: none;
+}
+
+.sum-text {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.sum-text-list {
+  margin: 30px 0px;
+}
+
+.row-centered {
+    text-align: center;
+}
+.col-centered {
+    display: inline-block;
+    float: none;
+    text-align: left;
+    margin-right: -4px;
+}
+
+.show-reading {
+  margin-top: 30px;
 }

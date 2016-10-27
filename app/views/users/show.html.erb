@@ -1,0 +1,16 @@
+<h2 id="profileHeader" class="text-center glow"><%= @user.name %></h2>
+
+<h3 class="text-center glow">Your past readings:<h3>
+
+<div class="container">
+  <div class="row row-centered">
+    <ul>
+      <% @readings.each do |reading| %>
+        <% link = reading_path(reading) %>
+        <li class="col-md-4 col-centered"><a id="readingLink" href=<%=link%>><%= reading.created_at.strftime("%m/%d/%Y")%><br>
+        The situation:<br>
+        <%= reading.cards.first.situation %></a></li>
+      <% end %>
+    </ul>
+  </div>
+<div>

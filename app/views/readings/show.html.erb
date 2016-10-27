@@ -1,17 +1,19 @@
-<h5> The Situation </h5>
-<%= image_tag(@cards[0].image_path, height: 480, width: 286) %><br>
-<%= @cards[0].situation %>
 
-<h5> The Wrong Way </h5>
-<%= image_tag(@cards[1].image_path, height: 480, width: 286) %><br>
-<%= @cards[1].danger %>
+<ul class="sum-text-list">
+  <li class="text-center glow-red sum-text">The Situation:<br>
+      <%= @cards[0].situation %></li>
+  <li class="text-center glow-red sum-text">The Wrong Path:<br>
+      <%= @cards[1].danger %></li>
+  <li class="text-center glow-red sum-text">The Way Forward:<br>
+      <%= @cards[2].safety %></li>
+  <li class="text-center glow-red sum-text">The Likely Outcome:<br>
+      <%= @cards[3].outcome %></li>
+</ul>
 
-<h5> The Way Forward </h5>
-<%= image_tag(@cards[2].image_path, height: 480, width: 286) %><br>
-<%= @cards[2].safety %>
-
-<h5> What Will Be </h5>
-<%= image_tag(@cards[3].image_path, height: 480, width: 286) %><br>
-<%= @cards[3].outcome %>
-
-<%= button_to 'Get a new Reading', readings_path, method: :post %>
+<div class='container card-container'>
+  <div class='row card-container row-centered show-reading'>
+    <% @cards.each do |card| %>
+      <%= image_tag("http://s3.amazonaws.com/soothsayr/" + card.image_path, { class: 'col-lg-3 col-centered card-sum'})%>
+    <% end %>
+  </div>
+</div>
