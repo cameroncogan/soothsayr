@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Cards from './Cards';
 import Transition from './Transition';
-import Button from './Button';
+import StartButton from './StartButton';
+import DeckButton from './DeckButton';
+import ReturnButton from './ReturnButton';
 import Prophecies from './Prophecies';
+import HelperText from './HelperText';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
@@ -16,13 +19,38 @@ class App extends React.Component {
       prophecies: [],
       shownProphecies: [],
       currentProphecy: [],
-      storyStage: -1
+      storyStage: -1,
+      deckStage: -1,
+      deckChoice: 1,
+      deckChoiceCards: [
+        {
+          id: 1,
+          image_path: '00_fool.jpg',
+          name: 'Morgan Greer'
+        },
+        {
+          id: 2,
+          image_path: '00_fool.jpg',
+          name: 'Rider Waite'
+        },
+        {
+          id: 3,
+          image_path: '00_fool.jpg',
+          name: 'Steampunk'
+        }
+      ],
+      userId: null
     };
 
     this.getCards = this.getCards.bind(this);
     this.addCard = this.addCard.bind(this);
     this.handleStoryChange = this.handleStoryChange.bind(this);
     this.getProphecies = this.getProphecies.bind(this);
+    this.renderDeckChoices = this.renderDeckChoices.bind(this);
+    this.returnToStart = this.returnToStart.bind(this);
+    this.handleDeckChoice = this.handleDeckChoice.bind(this);
+    this.sendDeckData = this.sendDeckData.bind(this);
+    this.getUserId = this.getUserId.bind(this);
   };
 
   getCards() {
@@ -71,12 +99,56 @@ class App extends React.Component {
     this.setState({ prophecies: nextProphecies });
   };
 
+  renderDeckChoices() {
+    let nextDeckStage = 1;
+    this.setState({ deckStage: nextDeckStage})
+  }
+
+  returnToStart() {
+    let nextDeckStage = -1;
+    this.setState({ deckStage: nextDeckStage})
+  }
+
+  handleDeckChoice(id) {
+    let nextDeckChoice = id;
+    this.setState({ deckChoice: nextDeckChoice});
+    this.sendDeckData();
+  }
+
+  sendDeckData() {
+    let app = this;
+    this.getUserId();
+    let userId = app.state.user_id;
+    $.ajax({
+      method: 'post',
+      url: '/users/' + userId + '.json',
+      contentType: 'application/json',
+      data: "deck_choice=" + app.state.deckChoice
+    })
+  };
+
+  getUserId() {
+    let app = this;
+    $.ajax({
+      method: 'get',
+      url: '/users.json',
+      contentType: 'application/json',
+    })
+    .done(function(data) {
+      console.log(data);
+      app.setState({ userId: data });
+    });
+  };
+
   render() {
     let shownCards = this.state.shownCards;
     let currentCard = this.state.currentCard;
+    let deckChoiceCards = this.state.deckChoiceCards;
     let shownProphecies = this.state.shownProphecies;
     let currentProphecy = this.state.currentProphecy;
     let storyStage = this.state.storyStage;
+    let deckStage = this.state.deckStage;
+    let deckChoice = this.state.deckChoice;
     let passedCards;
     let passedProphecies;
       if (storyStage === 10) {
@@ -88,16 +160,42 @@ class App extends React.Component {
       };
     let flavorText = this.state.flavorText;
     let getCards = this.getCards;
+    let renderDeckChoices = this.renderDeckChoices;
     let addCard = this.addCard;
     let handleStoryChange = this.handleStoryChange;
+    let handleDeckChoice = this.handleDeckChoice;
+    let returnToStart = this.returnToStart;
 
-    if (storyStage === 10) {
+    if (deckStage === 1) {
       return (
         <div>
-          <Button
+          <HelperText />
+          <Cards
+            cards={deckChoiceCards}
+            deckStage={deckStage}
+            deckChoice={deckChoice}
             storyStage={storyStage}
+            onClick={handleDeckChoice}
+          />
+          <ReturnButton
+            onClick={returnToStart}
+          />
+        </div>
+      )
+    } else if (storyStage === -1) {
+      return (
+        <div>
+          <StartButton
             onClick={getCards}
           />
+          <DeckButton
+            onClick={renderDeckChoices}
+          />
+        </div>
+      )
+    } else if (storyStage === 10) {
+      return (
+        <div>
           <ReactCSSTransitionGroup
             transitionName="example"
             transitionEnterTimeout={500}
@@ -125,10 +223,6 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Button
-            storyStage={storyStage}
-            onClick={getCards}
-          />
           <ReactCSSTransitionGroup
             transitionName="example"
             transitionEnterTimeout={500}

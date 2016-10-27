@@ -1,0 +1,31 @@
+<h2 id="profileHeader" class="text-center glow"><%= @user.name %></h2>
+
+<h3 class="text-center glow">Choose Your Deck:</h2>
+
+<div class='container'>
+  <div class='row row-centered'>
+    <%= image_tag("http://s3.amazonaws.com/soothsayr/00_fool.jpg", { class: 'col-md-4 col-centered card-sum', id: 'deckChoice1' })%>
+    <%= image_tag("http://s3.amazonaws.com/soothsayr/00_fool.jpg", { class: 'col-md-4 col-centered card-sum', id: 'deckChoice2' })%>
+    <%= image_tag("http://s3.amazonaws.com/soothsayr/00_fool.jpg", { class: 'col-md-4 col-centered card-sum', id: 'deckChoice3' })%>
+  </div>
+  <div class='row row-centered'>
+    <p class="col-md-2 col-sm-offset-1 col-centered">Rider-Waite</p>
+    <p class="col-md-2 col-centered">Morgan-Greer</p>
+    <p class="col-md-2 col-centered">Steampunk</p>
+  </div>
+</div>
+
+<h3 class="text-center glow">Your past readings:<h3>
+
+<div class="container">
+  <div class="row row-centered">
+    <ul>
+      <% @readings.each do |reading| %>
+        <% link = reading_path(reading) %>
+        <li class="col-md-4 col-centered"><a id="readingLink" href=<%=link%>><%= reading.created_at.strftime("%m/%d/%Y")%><br>
+        The situation:<br>
+        <%= reading.cards.first.situation %></a></li>
+      <% end %>
+    </ul>
+  </div>
+<div>

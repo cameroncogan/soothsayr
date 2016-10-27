@@ -4,6 +4,13 @@ class ReadingsController < ApplicationController
 
   end
 
+
+  def show
+    @user = current_user
+    @reading = Reading.find(params[:id])
+    @cards = @reading.cards
+  end
+
   def create
     @reading = Reading.new(user: current_user)
     if @reading.save
