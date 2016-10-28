@@ -40,7 +40,7 @@ const Cards = props => {
     )
   } else if (storyStage === 10) {
     return (
-      <div className='container'>
+      <div className='container cards-sum'>
         <div className='row'>
           <ul>
             <ReactCSSTransitionGroup

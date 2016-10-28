@@ -6,7 +6,7 @@ function StartButton(props) {
 
   return (
     <div>
-      <p id="readingButton" className="text-center glow" onClick={onClick}>{text}</p>
+      <p id="start-button" className="text-center glow reading-button" onClick={onClick}>{text}</p>
     </div>
   )
 };
