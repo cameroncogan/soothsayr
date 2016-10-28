@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     @user = current_user
     respond_to do |format|
-      format.json { render json: @user.id }
+      format.json { render json: { user_id: @user.id, deck_choice: @user.deck }}
     end
   end
 

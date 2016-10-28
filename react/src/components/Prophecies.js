@@ -19,10 +19,10 @@ const Prophecies = props => {
 
   if (storyStage === 10) {
     return (
-      <div className='container'>
+      <div className='container prophecies-sum'>
         <div className="row">
           <div className="col-lg-12">
-            <ul className='prophecies-sum'>
+            <ul>
             <ReactCSSTransitionGroup
               transitionName="example"
               transitionEnterTimeout={500}

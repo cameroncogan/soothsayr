@@ -10,19 +10,23 @@
   width: 343px;
   box-shadow: 0px 0px 30px white;
   padding: 0px;
+  border-radius: 20px;
+  -webkit-transition: transform 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out;
 }
 
 .card:hover {
-  -moz-transform: scale(1.10);
-  -webkit-transform: scale(1.10);
-  -o-transform: scale(1.10);
-  -ms-transform: scale(1.10);
-  -webkit-transform: scale(1.10);
-  transform: scale(1.10);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 
   -webkit-transition: transform 1.05s ease-in-out;
-  -moz-transition:transform 1.05s ease-in-out;
-  -ms-transition:transform 1.05s ease-in-out;
+  -moz-transition: transform 1.05s ease-in-out;
+  -ms-transition: transform 1.05s ease-in-out;
 }
 
 .card-glow {
@@ -42,9 +46,9 @@
   margin-top: 40px;
 }
 
-.glow-red {
-  color: red;
-  text-shadow: 0px 0px 30px red;
+.glow-purple {
+  color: #D8B9FF;
+  text-shadow: 0px 0px 30px #D8B9FF;
 }
 
 .card-sum {
@@ -52,6 +56,10 @@
   width: 240px;
   padding: 0px;
   margin-left: 5px;
+  border-radius: 20px;
+  -webkit-transition: transform 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out;
 }
 
 .card-sum:hover {
@@ -67,9 +75,9 @@
   -ms-transition: transform 1.05s ease-in-out;
 }
 
-.card-container {
-  margin: auto;
-  max-width: 100%;
+.cards-sum {
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 .navbar-inner {
@@ -91,6 +99,9 @@
 .prophecy {
   font-size: 42px;
   margin-top: 100px;
+  -webkit-transition: transform 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out;
 }
 
 input {
@@ -111,8 +122,11 @@ input {
 }
 
 .prophecy-sum {
-  font-size: 24px;
+  font-size: 30px;
   margin: 2px;
+  -webkit-transition: transform 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out;
 }
 
 .prophecy-sum:hover {
@@ -133,7 +147,8 @@ input {
 }
 
 .prophecies-sum {
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 .transition {
@@ -160,12 +175,42 @@ p {
   color: white;
 }
 
-#readingButton {
-  font-size: 30px;
+.reading-button {
+  font-size: 35px;
+  margin: 20px;
   text-decoration: none;
   color: white;
+  -webkit-transition: transform 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out;
+}
+
+#start-button {
+  font-size: 50px;
+}
+
+.start-options {
   margin-top: 150px;
 }
+
+.helper-text {
+  font-size: 30px;
+  margin: 30px;
+}
+
+.reading-button:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition: transform 1.05s ease-in-out;
+  -ms-transition: transform 1.05s ease-in-out;
+}
+
 
 .profilePriorReading {
   margin-left: 40px;
@@ -177,8 +222,8 @@ p {
 
 #readingLink {
   text-decoration: none;
-  color: red;
-  text-shadow: 0px 0px 30px red;
+  color: purple;
+  text-shadow: 0px 0px 30px purple;
 }
 
 a.li {
@@ -205,5 +250,5 @@ a.li {
 }
 
 .show-reading {
-  margin: 30px;
+  margin: 30px 30px 60px 30px;
 }

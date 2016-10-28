@@ -1,16 +1,16 @@
 
 <ul class="sum-text-list">
-  <li class="text-center glow-red sum-text">The Situation:<br>
+  <li class="text-center glow-purple sum-text">The Situation:<br>
       <%= @cards[0].situation %></li>
-  <li class="text-center glow-red sum-text">The Wrong Path:<br>
+  <li class="text-center glow-purple sum-text">The Wrong Path:<br>
       <%= @cards[1].danger %></li>
-  <li class="text-center glow-red sum-text">The Way Forward:<br>
+  <li class="text-center glow-purple sum-text">The Way Forward:<br>
       <%= @cards[2].safety %></li>
-  <li class="text-center glow-red sum-text">The Likely Outcome:<br>
+  <li class="text-center glow-purple sum-text">The Likely Outcome:<br>
       <%= @cards[3].outcome %></li>
 </ul>
 
-<div class='container card-container'>
+<div class='container'>
   <div class='row card-container row-centered show-reading'>
     <% @cards.each do |card| %>
       <%= image_tag("http://s3.amazonaws.com/soothsayr/" + card.image_path, { class: 'col-lg-3 col-centered card-sum'})%>

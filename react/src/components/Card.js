@@ -6,11 +6,18 @@ function Card(props) {
   let deckChoice = props.deckChoice;
   let id = props.id;
   let onClick = () => props.onClick(id);
-  let image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path;
+  let image_path;
+  if (deckStage === 1) {
+    image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path;
+  } else if (deckChoice === 3) {
+    image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path + "_" + deckChoice + ".jpg"
+  } else {
+    image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path + "_" + deckChoice + ".png"
+  };
   let storyArray = [2, 4, 6, 8];
-  let deckChoiceClass = 'card-sum col-md-3 col-centered img-rounded';
+  let deckChoiceClass = 'card-sum col-md-3 col-centered';
     if (id === deckChoice) {
-      deckChoiceClass = 'card-sum col-md-3 col-centered img-rounded card-glow';
+      deckChoiceClass = 'card-sum col-md-3 col-centered card-glow';
     };
 
   if (deckStage === 1) {
@@ -22,13 +29,13 @@ function Card(props) {
   } else if (storyArray.includes(storyStage)) {
     return (
       <li className='col-md-6'>
-        <img src={image_path} className='card img-rounded'></img>
+        <img src={image_path} className='card'></img>
       </li>
     );
   } else if (storyStage === 10) {
     return (
       <li>
-        <img src={image_path} className='col-sm-2 card-sum img-rounded'></img>
+        <img src={image_path} className='col-sm-2 card-sum'></img>
       </li>
     );
   } else {

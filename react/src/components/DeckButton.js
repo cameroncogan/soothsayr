@@ -6,7 +6,7 @@ function DeckButton(props) {
 
   return (
     <div>
-      <p id="readingButton" className="text-center glow" onClick={onClick}>{text}</p>
+      <p className="text-center glow reading-button" onClick={onClick}>{text}</p>
     </div>
   )
 };
