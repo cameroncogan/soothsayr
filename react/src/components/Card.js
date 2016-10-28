@@ -35,7 +35,7 @@ function Card(props) {
   } else if (storyStage === 10) {
     return (
       <li>
-        <img src={image_path} className='col-sm-2 card-sum'></img>
+        <img src={image_path} className='col-lg-3 card-sum'></img>
       </li>
     );
   } else {
