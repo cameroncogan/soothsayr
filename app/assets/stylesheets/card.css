@@ -198,6 +198,15 @@ p {
   margin: 30px;
 }
 
+.description-text {
+  margin-top: 0px;
+  font-size: 24px;
+}
+
+.description-text-div {
+  margin: 60px;
+}
+
 .reading-button:hover {
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
