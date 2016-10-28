@@ -6,6 +6,7 @@ import DeckButton from './DeckButton';
 import ReturnButton from './ReturnButton';
 import Prophecies from './Prophecies';
 import HelperText from './HelperText';
+import DescriptionText from './DescriptionText';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
@@ -107,8 +108,25 @@ class App extends React.Component {
   }
 
   returnToStart() {
-    let nextDeckStage = -1;
-    this.setState({ deckStage: nextDeckStage})
+    if (this.state.deckStage === 1) {
+      let nextDeckStage = -1;
+      this.setState({ deckStage: nextDeckStage})
+    } else {
+      let nextStoryStage = -1;
+      let nextCards = [];
+      let nextShownCards = [];
+      let nextCurrentCard = [];
+      let nextProphecies = [];
+      let nextShownProphecies = [];
+      let nextCurrentProphecy = [];
+      this.setState({ storyStage: nextStoryStage });
+      this.setState({ cards: nextCards });
+      this.setState({ shownCards: nextShownCards });
+      this.setState({ currentCard: nextCurrentCard });
+      this.setState({ prophecies: nextProphecies });
+      this.setState({ shownProphecies: nextShownProphecies });
+      this.setState({ currentProphecy: nextCurrentProphecy });
+    }
   }
 
   handleDeckChoice(id) {
@@ -184,6 +202,9 @@ class App extends React.Component {
             storyStage={storyStage}
             onClick={handleDeckChoice}
           />
+          <DescriptionText
+            deckChoice={deckChoice}
+          />
           <ReturnButton
             onClick={returnToStart}
           />
@@ -212,12 +233,13 @@ class App extends React.Component {
             cards={passedCards}
             storyStage={storyStage}
             deckChoice={deckChoice}
-            onClick={handleStoryChange}
           />
           <Prophecies
             prophecies={passedProphecies}
             storyStage={storyStage}
-            onClick={handleStoryChange}
+          />
+          <ReturnButton
+            onClick={returnToStart}
           />
         </div>
       );
