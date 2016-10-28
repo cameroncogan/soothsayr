@@ -19,10 +19,10 @@ Card.create!(
 Card.create!(
   name: 'Nine of Cups',
   image_path: '09_cups',
-  situation: 'There is something you must learn, perhaps knowledge, perhaps a lesson',
-  danger: 'You have studied long enough. Do not let searching for answers overcome the will to act',
-  safety: 'In knowledge is sorrow, but also the fire to forge a tomorrow',
-  outcome: 'You will learn from this. You will have that knowledge forever.'
+  situation: 'The Nine of Cups represents material and physical well-being, with a connotation of wish fullfillment. In the Siuation position, it suggests that you dwell on your own happiness, or lack thereof.',
+  danger: 'The Nine of Cups represents material and physical well-being, with a connotation of wish fullfillment. In this context, it urges you to be careful what you wish for.',
+  safety: 'The Nine of Cups represents material and physical well-being, with a connotation of wish fullfillment. In this position it suggests that you should treat yourself. Go splurge!',
+  outcome: "The Nine of Cups represents material and physical well-being, with a connotation of wish fullfillment. It's a very positive Outcome card. You will probably get what you're after in the end."
 )
 
 Card.create!(
