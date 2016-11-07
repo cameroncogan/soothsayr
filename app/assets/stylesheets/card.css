@@ -186,6 +186,16 @@ p {
   -ms-transition: transform 1.2s ease-out;
 }
 
+.return-button {
+  font-size: 35px;
+  margin: 0px 20px 20px 20px;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: transform 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out;
+}
+
 #start-button {
   font-size: 50px;
 }
@@ -205,10 +215,23 @@ p {
 }
 
 .description-text-div {
-  margin: 60px;
+  margin: 30px;
 }
 
 .reading-button:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition: transform 1.05s ease-in-out;
+  -ms-transition: transform 1.05s ease-in-out;
+}
+
+.return-button:hover {
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -o-transform: scale(1.05);
