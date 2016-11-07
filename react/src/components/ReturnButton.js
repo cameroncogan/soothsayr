@@ -6,7 +6,7 @@ function ReturnButton(props) {
 
   return (
     <div>
-      <p className="text-center glow reading-button" onClick={onClick}>{text}</p>
+      <p className="text-center glow return-button" onClick={onClick}>{text}</p>
     </div>
   )
 };
