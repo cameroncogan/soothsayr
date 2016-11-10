@@ -9,14 +9,12 @@ function Transition(props) {
     preFourth: { id: 5, text: 'The final turn represents what will be, though the future is not set in stone...' },
     outro: { id: 6, text: 'Remember that the cards do not tell all. Your fate can be mended, if you have the will. Here is your summary...' }
   };
-  let onClick = props.onCardClick;
   let storyStage = props.storyStage;
   let text;
   let key;
     if (storyStage === 0) {
       text = FlavorText.intro.text;
       key = FlavorText.intro.id;
-      onClick = props.onTransitionClick;
     } else if (storyStage === 1) {
       text = FlavorText.preFirst.text;
       key = FlavorText.preFirst.id;
@@ -32,7 +30,6 @@ function Transition(props) {
     } else if (storyStage === 9) {
       text = FlavorText.outro.text;
       key = FlavorText.outro.id;
-      onClick = props.onTransitionClick;
     } else {
       text = '';
     };
@@ -41,7 +38,7 @@ function Transition(props) {
     return (
       <div className='container'>
         <div className='row'>
-          <p className="transition col-lg-12 glow" key={key} onClick={onClick}>{text}</p>
+          <p className="transition col-lg-12 glow" key={key} >{text}</p>
         </div>
       </div>
     );
