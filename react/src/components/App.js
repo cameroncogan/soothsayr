@@ -52,6 +52,7 @@ class App extends React.Component {
     this.handleDeckChoice = this.handleDeckChoice.bind(this);
     this.sendDeckData = this.sendDeckData.bind(this);
     this.getUserIdandDeck = this.getUserIdandDeck.bind(this);
+    this.preloadImages = this.preloadImages.bind(this);
   };
 
   getCards() {
@@ -88,6 +89,9 @@ class App extends React.Component {
   handleStoryChange() {
     let newStoryStage = this.state.storyStage;
     newStoryStage += 1;
+    if (newStoryStage === 0) {
+      this.preloadImages();
+    };
     this.setState({ storyStage: newStoryStage });
   };
 
@@ -148,6 +152,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getUserIdandDeck();
+    this.preloadImages();
   };
 
   getUserIdandDeck() {
@@ -162,6 +167,29 @@ class App extends React.Component {
       app.setState({ deckChoice: data.deck_choice });
     });
   };
+
+  preloadImages() {
+    let deckChoiceCards = this.state.deckChoiceCards;
+    let cards = this.state.cards;
+    let deckChoice = this.state.deckChoice;
+    if (deckChoice === 3) {
+      deckChoice += ".jpg"
+    } else {
+      deckChoice += ".png"
+    };
+    let imagesToPreload = [];
+    for (let card of deckChoiceCards) {
+      imagesToPreload.push("http://s3.amazonaws.com/soothsayr/" + card.image_path)
+    };
+    for (let card of cards) {
+      imagesToPreload.push("http://s3.amazonaws.com/soothsayr/" + card.image_path + "_" + deckChoice)
+    };
+   imagesToPreload.map(src => {
+     let image = new Image()
+     image.src = src
+     return image
+   });
+ };
 
 
   render() {
