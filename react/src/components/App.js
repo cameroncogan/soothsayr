@@ -190,6 +190,13 @@ class App extends React.Component {
     let handleDeckChoice = this.handleDeckChoice;
     let returnToStart = this.returnToStart;
     let getUserIdandDeck = this.getUserIdandDeck;
+    let handlePageClick;
+    let cardStages = [1, 3, 5, 7];
+      if (cardStages.includes(storyStage)) {
+        handlePageClick = addCard
+      } else {
+        handlePageClick = handleStoryChange
+      };
 
     if (deckStage === 1) {
       return (
@@ -224,6 +231,9 @@ class App extends React.Component {
     } else if (storyStage === 10) {
       return (
         <div>
+          <ReturnButton
+            onClick={returnToStart}
+          />
           <Transition
             storyStage={storyStage}
             onTransitionClick={handleStoryChange}
@@ -238,19 +248,14 @@ class App extends React.Component {
             prophecies={passedProphecies}
             storyStage={storyStage}
           />
-          <ReturnButton
-            onClick={returnToStart}
-          />
         </div>
       );
     } else {
       return (
-        <div>
+        <div onClick={handlePageClick}>
           <div>
             <Transition
               storyStage={storyStage}
-              onTransitionClick={handleStoryChange}
-              onCardClick={addCard}
             />
           </div>
           <div className='container'>
@@ -259,12 +264,10 @@ class App extends React.Component {
                 cards={passedCards}
                 storyStage={storyStage}
                 deckChoice={deckChoice}
-                onClick={handleStoryChange}
               />
               <Prophecies
                 prophecies={passedProphecies}
                 storyStage={storyStage}
-                onClick={handleStoryChange}
               />
             </div>
           </div>

@@ -12,7 +12,6 @@ const Prophecies = props => {
         id={prophecy.id}
         prophecy={prophecy.text}
         storyStage={storyStage}
-        onClick={props.onClick}
       />
     );
   })
