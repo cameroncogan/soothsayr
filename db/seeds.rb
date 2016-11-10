@@ -375,3 +375,183 @@ Card.create!(
   safety: "The Ten of Cups represents happy love. If there's someone closer to you, get closer. If there's someone you want to be close to, this situation may present that opportunity.",
   outcome: "The Ten of Cups represents happy love. If you've been thinking of romance, this is as positive as it gets. If not, the situation will still end with you in happy connection to those close to you."
 )
+
+Card.create!(
+  name: "Ace of Swords",
+  image_path: 'ace_swords',
+  situation: "The Ace of Swords represents an opportunity for new thinking. You're caught in a fleeting moment where the chance for fresh thought can be seized.",
+  danger: "The Ace of Swords represents an opportunity for new thinking. Be wary of it. What's motivating you to change your mind? This card suggests trouble.",
+  safety: "The Ace of Swords represents an opportunity for new thinking. That's exactly what's required here. Seize the moment and expand your vision.",
+  outcome: "The Ace of Swords represents an opportunity for new thinking. This situation will end with insight, if you are dextrous enough to catch it."
+)
+
+Card.create!(
+  name: "Two of Swords",
+  image_path: "02_swords",
+  situation: "The Two of Swords represents conflict between your heart and your head. You're being forced to choose between what you desire, and what you know is good for you.",
+  danger: "The Two of Swords represents conflict between your heart and your head. Don't let it bog you down. Though painful, making a choice is better than lingering in the shadow of doubt.",
+  safety: "The Two of Swords represents conflict between your heart and your head. Consider what you want, and what you need, and then act. You'll make the right choice.",
+  outcome: "The Two of Swords represents conflict between your heart and your head. This situation will end indistinctly, with you torn between two outcomes. You'll need to choose."
+)
+
+Card.create!(
+  name: "Three of Swords",
+  image_path: "03_swords",
+  situation: "The Three of Swords represents the sorrow of knowing something that hurts you. You've learned a truth that is hard to swallow, and dwell on it now.",
+  danger: "The Three of Swords represents the sorrow of knowing something that hurts you. Don't dwell on these thoughts, there's no solution in them. Just more pain.",
+  safety: "The Three of Swords represents the sorrow of knowing something that hurts you. This is something you must come to terms with. Realizing the truth will push you forward, even if it's painful.",
+  outcome: "The Three of Swords represents the sorrow of knowing something that hurts you. The situation will end in just that way. You'll find truth, but it will be a painful truth."
+)
+
+Card.create!(
+  name: "Four of Swords",
+  image_path: "04_swords",
+  situation: "The Four of Swords represents stilling your mind from its troubles. As the Situation, you're trying to catch a breather from what's gnawing at you.",
+  danger: "The Four of Swords represents stilling your mind from its troubles. Seen here, the card suggests that you avoid contemplation. Don't ruminate. It is what it is.",
+  safety: "The Four of Swords represents stilling your mind from its troubles. The way forward is to stand back and reassess. You need time to collect yourself, to lay down your cares and breathe.",
+  outcome: "The Four of Swords represents stilling your mind from its troubles. This situation will end with you able to let go, not allowing the crisis to consume you."
+)
+
+Card.create!(
+  name: "Five of Swords",
+  image_path: "05_swords",
+  situation: "The Five of Swords represents victory shaded by defeat. You worry about manipulators and deception threatening what you have worked for.",
+  danger: "The Five of Swords represents victory shaded by defeat. Beware of deception, be on guard against overconfidence. The situation may not be what it seems.",
+  safety: "The Five of Swords represents victory shaded by defeat. Consider the situation, how it appears. Something is off about it. You need to find out what.",
+  outcome: "The Five of Swords represents victory shaded by defeat. As an Outcome, this card suggests winning, but not fully. This situation will leave loose ends, perhaps malicious ones."
+)
+
+Card.create!(
+  name: "Six of Swords",
+  image_path: "06_swords",
+  situation: "The Six of Swords represents rescue. You're in a situation where you're looking for a way out. You need someone's help.",
+  danger: "The Six of Swords represents rescue. You're looking to others for help. Don't. You need to do this alone, your way.",
+  safety: "The Six of Swords represents rescue. You need help to get out of this. When someone reaches out to you, take their hand.",
+  outcome: "The Six of Swords represents rescue. This is an ambivalent Outcome, suggesting another actor will resolve the situation--a deux ex machina."
+)
+
+Card.create!(
+  name: "Seven of Swords",
+  image_path: "07_swords",
+  situation: "The Seven of Swords represents taking something. Either someone has taken from you, or you contemplate what to take for your own.",
+  danger: "The Seven of Swords represents taking something. Appearing here, it urges caution in your dealings. Ask yourself, why are you carrying the things you hold?",
+  safety: "The Seven of Swords represents taking something. In this position the card suggests that going after what you want will yield success, perhaps begrudgingly for others.",
+  outcome: "The Seven of Swords represents taking something. Either someone will carry off what you want, or you'll have to wrest what you need from another, or from the world."
+)
+
+Card.create!(
+  name: "Eight of Swords",
+  image_path: "08_swords",
+  situation: "The Eight of Swords represents a dangerous siutation. You're in a precarious position right now, worried to even move for fear of disaster.",
+  danger: "The Eight of Swords represents a dangerous siutation. You need to be cautious. Look again, and ask yourself where this thing might snag you and drag you down.",
+  safety: "The Eight of Swords represents a dangerous siutation. You'll have to get out of your comfort zone to find the way forward. The name of the game is risk.",
+  outcome: "The Eight of Swords represents a dangerous siutation. Things will end precariously, with you balanced carefully, trying not to let it all come crashing down."
+)
+
+Card.create!(
+  name: "Nine of Swords",
+  image_path: "09_swords",
+  situation: "The Nine of Swords represents the power of anxiety. You are gripped by concerns, regrets, and it's hard to let them go.",
+  danger: "The Nine of Swords represents the power of anxiety. Don't let yourself dwell on what's done, or what might come. It will paralyze you.",
+  safety: "The Nine of Swords represents the power of anxiety. Get in tune with why you're worrying so much. What can you do to aleviate it? And then act.",
+  outcome: "The Nine of Swords represents the power of anxiety. This is a negative Outcome, suggesting that this situation is going to leave its mark on you, gnawing at you after it's over."
+)
+
+Card.create!(
+  name: "Ten of Swords",
+  image_path: "10_swords",
+  situation: "The Ten of Swords represents surrender in the face of bad fortune. Things have gone wrong with something, perhaps irrecoverably, and it feels like you've lost your shot.",
+  danger: "The Ten of Swords represents surrender in the face of bad fortune. Not every fight can be won. Sometimes struggling on is just foolish, and will accomplish nothing.",
+  safety: "The Ten of Swords represents surrender in the face of bad fortune. Accepting loss and reconciling with yourself will help you here. Know when it's over.",
+  outcome: "The Ten of Swords represents surrender in the face of bad fortune. Despite all your efforts, sometimes you can't pull out a win. It's best to just move on."
+)
+
+Card.create!(
+  name: "Ace of Pentacles",
+  image_path: "ace_pentacles",
+  situation: "The Ace of Pentacles represents a fleeting opportunity for prosperity. The golden hand is knocking at your door, but you'll need to be fast to answer.",
+  danger: "The Ace of Pentacles represents a fleeting opportunity for prosperity. Don't jump at it. Look closer. All that glitters is not gold.",
+  safety: "The Ace of Pentacles represents a fleeting opportunity for prosperity. You should seize on this, and quickly. You've got the Midas touch right now.",
+  outcome: "The Ace of Pentacles represents a fleeting opportunity for prosperity. The situation will offer a tantalizing chance for material well being, but you'll have to move fast."
+)
+
+Card.create!(
+  name: "Two of Pentacles",
+  image_path: "02_pentacles",
+  situation: "The Two of Pentacles represents a balancing act. You're using what you have to try and take care of your needs, but you worry about keeping up.",
+  danger: "The Two of Pentacles represents a balancing act. Be wary of what you're reaching for. You may be wasting precious energy on something that's ultimately trivial.",
+  safety: "The Two of Pentacles represents a balancing act. Seen here, it urges you to balance what you want with what you can give. Don't overplay your hand.",
+  outcome: "The Two of Pentacles represents a balancing act. The situation will require some upkeep on your part to stay resolved. You won't just check it off your list."
+)
+
+Card.create!(
+  name: "Three of Pentacles",
+  image_path: "03_pentacles",
+  situation: "The Three of Pentacles represents teamwork. You may be trying to accomplish something in concert with others, or perhaps drawing on many facets of yourself to do the same.",
+  danger: "The Three of Pentacles represents teamwork. Seen here, it urges you to be mindful of your role in the situation. Don't work against yourself.",
+  safety: "The Three of Pentacles represents teamwork. In this position, the card suggests reaching your goal by using what other's have to offer, be it help or guidance.",
+  outcome: "The Three of Pentacles represents teamwork. This is a positive Outcome, suggesting success, either with others or by letting your best traits harmonize within you."
+)
+
+Card.create!(
+  name: "Four of Pentacles",
+  image_path: "04_pentacles",
+  situation: "The Four of Pentacles represents building wealth. You may be worried about money, or about your own abilities to generate what you need.",
+  danger: "The Four of Pentacles represents building wealth. Seen here, the card urges you against being too tight-fisted. Remember to live.",
+  safety: "The Four of Pentacles represents building wealth. Money, power, influence--they could solve your problems, but the task of gaining them is its own challenge.",
+  outcome: "The Four of Pentacles represents building wealth. This situation will be a boon to you, perhaps financially, but just as likely to your abilities and confidence."
+)
+
+Card.create!(
+  name: "Five of Pentacles",
+  image_path: "05_pentacles",
+  situation: "The Five of Pentacles represents physical need. You worry about some element of survival, be it money, time, or health.",
+  danger: "The Five of Pentacles represents physical need. It would be easy to forget what's most important to live, to overextend yourself. Mind the fundamentals.",
+  safety: "The Five of Pentacles represents physical need. Your health, your holdings, your time, even your survival--these are elemental things. Handle the first, and the rest will come.",
+  outcome: "The Five of Pentacles represents physical need. The situation may lead to a tough time, a lean time. You may not have everything you need, but you'll need to make do anyway."
+)
+
+Card.create!(
+  name: "Six of Pentacles",
+  image_path: "06_pentacles",
+  situation: "The Six of Pentacles represents reciprocity in giving. You may be considering how to help someone, what it would take and what the return would be on your time.",
+  danger: "The Six of Pentacles represents reciprocity in giving. You can't expect to be handed anything. It's alright to seek aid, but be prepared to give in return.",
+  safety: "The Six of Pentacles represents reciprocity in giving. If you're seeking help, make sure you earn it. If you're rendering aid, make sure it's worth it.",
+  outcome: "The Six of Pentacles represents reciprocity in giving. You will get what you're after, but it may require some back scratching on your part--or theirs."
+)
+
+Card.create!(
+  name: "Seven of Pentacles",
+  image_path: "07_pentacles",
+  situation: "The Seven of Pentacles represents a reflective pause. You find yourself mid-way through, hanging back, looking at what you've accomplished so far, and what remains.",
+  danger: "The Seven of Pentacles represents a reflective pause. See this as an opportunity to find flaws, to reconceive. Don't assume what you've done so far is good enough.",
+  safety: "The Seven of Pentacles represents a reflective pause. Look over where you're at, see if what you've done so far can be improved on. And then finish the job.",
+  outcome: "The Seven of Pentacles represents a reflective pause. Seen as the Outcome, the card suggests that the situation will reach a point of relative stability from which you will be free to rethink or press forward, as appropriate."
+)
+
+Card.create!(
+  name: "Eight of Pentacles",
+  image_path: "08_pentacles",
+  situation: "The Eight of Pentacles represents working carefully. You're in the midst of a process, perhaps enjoying it, with a need to get it right.",
+  danger: "The Eight of Pentacles represents working carefully. Don't be too perfectionistic. That's important of course, but getting things done matters, too.",
+  safety: "The Eight of Pentacles represents working carefully. Take your time. Get it perfect. The care you take in this will show.",
+  outcome: "The Eight of Pentacles represents working carefully. The situation may be drawn out, may not give immediate satisfaction. But it will be well resolved in the end."
+)
+
+Card.create!(
+  name: "Nine of Pentacles",
+  image_path: "09_pentacles",
+  situation: "The Nine of Pentacles represents being a self-made person. Perhaps you are reflecting on what you've done to get here; perhaps you worry about what you could have done differently.",
+  danger: "The Nine of Pentacles represents being a self-made person. Here, it decries independence. Everyone needs help sometimes. Don't throw away other people in this.",
+  safety: "The Nine of Pentacles represents being a self-made person. You are urged to proceed independently, rely on yourself, and trust your own values to proceed.",
+  outcome: "The Nine of Pentacles represents being a self-made person. This is a very positive Outcome. Not only will you succeed in this situation, it will be on your own terms."
+)
+
+Card.create!(
+  name: "Ten of Pentacles",
+  image_path: "10_pentacles",
+  situation: "The Ten of Pentacles represents a perfect moment. Things may be going very well right now, or perhaps you just want them to be.",
+  danger: "The Ten of Pentacles represents a perfect moment. Sometimes that can be a facade, though. Don't worry over getting it exactly right. Just be happy.",
+  safety: "The Ten of Pentacles represents a perfect moment. Think about how what you're doing fits into your vision of life as a whole, and act on that knowledge.",
+  outcome: "The Ten of Pentacles represents a perfect moment. This is an amazing Outcome, suggesting that by the end of this, you'll have experienced true happiness."
+)
