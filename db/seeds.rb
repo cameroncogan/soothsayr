@@ -57,7 +57,7 @@ Card.create!(
   image_path: '06_lovers',
   situation: "The Lovers represents instinctive decisions. Maybe romance is on your mind, but just as likely you struggle with taking action. Is that why you're here?",
   danger: "The Lovers represents instinctive decisions. In this context, it urges pushing away from restraints. Don't let yourself be tied down, by love or by anything.",
-  safety: "The Lovers represents instinctive decisions. Appearing here, it suggests that your follow your heart, not your head. You won't be led astray.",
+  safety: "The Lovers represents instinctive decisions. Appearing here, it suggests that you follow your heart, not your head. You won't be led astray.",
   outcome: "The Lovers represents instinctive decisions. Seen here, this card suggests that you will reach your goal without even trying."
 )
 
@@ -554,4 +554,148 @@ Card.create!(
   danger: "The Ten of Pentacles represents a perfect moment. Sometimes that can be a facade, though. Don't worry over getting it exactly right. Just be happy.",
   safety: "The Ten of Pentacles represents a perfect moment. Think about how what you're doing fits into your vision of life as a whole, and act on that knowledge.",
   outcome: "The Ten of Pentacles represents a perfect moment. This is an amazing Outcome, suggesting that by the end of this, you'll have experienced true happiness."
+)
+
+Card.create!(
+  name: "Page of Wands",
+  image_path: "page_wands",
+  situation: "The Page of Wands represents an willfull, creative person, a beginner, full of passion. Your thoughts turn to this person. Who are they?",
+  danger: "The Page of Wands represents an willfull, creative person, a beginner, full of passion. Who does the Page remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Page of Wands represents an willfull, creative person, a beginner, full of passion. Who does the Page remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Page of Wands represents an willfull, creative person, a beginner, full of passion. Who does the Page remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Knight of Wands",
+  image_path: "knight_wands",
+  situation: "The Knight of Wands represents someone who acts based on their willfull impulses. Your thoughts turn to this person. Who are they?",
+  danger: "The Knight of Wands represents someone who acts based on their willfull impulses. Who does the Knight remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Knight of Wands represents someone who acts based on their willfull impulses. Who does the Knight remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Knight of Wands represents someone who acts based on their willfull impulses. Who does the Knight remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Queen of Wands",
+  image_path: "queen_wands",
+  situation: "The Queen of Wands represents someone who nurtures other people's inspirations, maybe even yours. Your thoughts turn to this person. Who are they?",
+  danger: "The Queen of Wands represents someone who nurtures other people's inspirations, maybe even yours. Who does the Queen remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Queen of Wands represents someone who nurtures other people's inspirations, maybe even yours. Who does the Queen remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Queen of Wands represents someone who nurtures other people's inspirations, maybe even yours. Who does the Queen remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "King of Wands",
+  image_path: "king_wands",
+  situation: "The King of Wands represents someone who is driven by passionate intellectual energy. Your thoughts turn to this person. Who are they?",
+  danger: "The King of Wands represents someone who is driven by passionate intellectual energy. Who does the King remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The King of Wands represents someone who is driven by passionate intellectual energy. Who does the King remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The King of Wands represents someone who is driven by passionate intellectual energy. Who does the King remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Page of Cups",
+  image_path: "page_cups",
+  situation: "The Page of Wands represents an artistic or caring person, starting something new, full of fascination. Your thoughts turn to this person. Who are they?",
+  danger: "The Page of Wands represents an artistic or caring person, starting something new, full of fascination. Who does the Page remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Page of Wands represents an artistic or caring person, starting something new, full of fascination. Who does the Page remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Page of Wands represents an artistic or caring person, starting something new, full of fascination. Who does the Page remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Knight of Cups",
+  image_path: "knight_cups",
+  situation: "The Knight of Cups represents someone who acts based on their artistry or empathy. Your thoughts turn to this person. Who are they?",
+  danger: "The Knight of Cups represents someone who acts based on their artistry or empathy. Who does the Knight remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Knight of Cups represents someone who acts based on their artistry or empathy. Who does the Knight remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Knight of Cups represents someone who acts based on their artistry or empathy. Who does the Knight remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Queen of Cups",
+  image_path: "queen_cups",
+  situation: "The Queen of Cups represents someone who nurtures other people's emotional well being, maybe even yours. Your thoughts turn to this person. Who are they?",
+  danger: "The Queen of Cups represents someone who nurtures other people's emotional well being, maybe even yours. Who does the Queen remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Queen of Cups represents someone who nurtures other people's emotional well being, maybe even yours. Who does the Queen remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Queen of Cups represents someone who nurtures other people's emotional well being, maybe even yours. Who does the Queen remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "King of Cups",
+  image_path: "king_cups",
+  situation: "The King of Cups represents someone who is driven by emotion or creative intensity. Your thoughts turn to this person. Who are they?",
+  danger: "The King of Cups represents someone who is driven by emotion or creative intensity. Who does the King remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The King of Cups represents someone who is driven by emotion or creative intensity. Who does the King remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The King of Cups represents someone who is driven by emotion or creative intensity. Who does the King remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Page of Swords",
+  image_path: "page_swords",
+  situation: "The Page of Wands represents a thoughtful, expressive person, starting something new, full of interest. Your thoughts turn to this person. Who are they?",
+  danger: "The Page of Wands represents a thoughtful, expressive person, starting something new, full of interest. Who does the Page remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Page of Wands represents a thoughtful, expressive person, starting something new, full of interest. Who does the Page remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Page of Wands represents a thoughtful, expressive person, starting something new, full of interest. Who does the Page remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Knight of Swords",
+  image_path: "knight_swords",
+  situation: "The Knight of Swords represents someone who acts based on their artistry or empathy. Your thoughts turn to this person. Who are they?",
+  danger: "The Knight of Swords represents someone who acts based on their artistry or empathy. Who does the Knight remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Knight of Swords represents someone who acts based on their artistry or empathy. Who does the Knight remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Knight of Swords represents someone who acts based on their artistry or empathy. Who does the Knight remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Queen of Swords",
+  image_path: "queen_swords",
+  situation: "The Queen of Swords represents someone who nurtures other people's ideas and dreams. Your thoughts turn to this person. Who are they?",
+  danger: "The Queen of Swords represents someone who nurtures other people's ideas and dreams. Who does the Queen remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Queen of Swords represents someone who nurtures other people's ideas and dreams. Who does the Queen remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Queen of Swords represents someone who nurtures other people's ideas and dreams. Who does the Queen remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "King of Swords",
+  image_path: "king_swords",
+  situation: "The King of Swords represents someone who is driven by connections, an amazing communicator. Your thoughts turn to this person. Who are they?",
+  danger: "The King of Swords represents someone who is driven by connections, an amazing communicator. Who does the King remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The King of Swords represents someone who is driven by connections, an amazing communicator. Who does the King remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The King of Swords represents someone who is driven by connections, an amazing communicator. Who does the King remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Page of Pentacles",
+  image_path: "page_pentacles",
+  situation: "The Page of Pentacles represents someone beginning a new project, often based on resources or finances. Your thoughts turn to this person. Who are they?",
+  danger: "The Page of Pentacles represents someone beginning a new project, often based on resources or finances. Who does the Page remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Page of Pentacles represents someone beginning a new project, often based on resources or finances. Who does the Page remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Page of Pentacles represents someone beginning a new project, often based on resources or finances. Who does the Page remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Knight of Pentacles",
+  image_path: "knight_pentacles",
+  situation: "The Knight of Pentacles represents someone who acts based on their wants and desires. Your thoughts turn to this person. Who are they?",
+  danger: "The Knight of Pentacles represents someone who acts based on their wants and desires. Who does the Knight remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Knight of Pentacles represents someone who acts based on their wants and desires. Who does the Knight remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Knight of Pentacles represents someone who acts based on their wants and desires. Who does the Knight remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "Queen of Pentacles",
+  image_path: "queen_pentacles",
+  situation: "The Queen of Pentacles represents someone who nurtures other people materially and financially. Your thoughts turn to this person. Who are they?",
+  danger: "The Queen of Pentacles represents someone who nurtures other people materially and financially. Who does the Queen remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The Queen of Pentacles represents someone who nurtures other people materially and financially. Who does the Queen remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The Queen of Pentacles represents someone who nurtures other people materially and financially. Who does the Queen remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
+)
+
+Card.create!(
+  name: "King of Pentacles",
+  image_path: "king_pentacles",
+  situation: "The King of Pentacles represents someone who is driven by the physical world and material wealth. Your thoughts turn to this person. Who are they?",
+  danger: "The King of Pentacles represents someone who is driven by the physical world and material wealth. Who does the King remind you of? This person, in this situation, exemplifies the wrong way. Be forewarned.",
+  safety: "The King of Pentacles represents someone who is driven by the physical world and material wealth. Who does the King remind you of? This person, in this situation, represents what to strive for. Do it their way.",
+  outcome: "The King of Pentacles represents someone who is driven by the physical world and material wealth. Who does the King remind you of? The Outcome may involve this person, or it may just end in a manner you associate with them."
 )
