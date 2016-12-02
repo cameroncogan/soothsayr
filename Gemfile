@@ -11,6 +11,7 @@ gem 'dotenv'
 gem 'dotenv-rails'
 gem 'rubocop'
 
+
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
