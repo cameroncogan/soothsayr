@@ -20,7 +20,7 @@ function Card(props) {
 
   if (deckStage === 1) {
     return (
-      <li className='col-md-4'>
+      <li className='col-sm-6'>
         <img src={image_path} className={deckChoiceClass} id={id} onClick={onClick}></img>
       </li>
     )

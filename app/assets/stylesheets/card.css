@@ -159,7 +159,7 @@ input {
 }
 
 body {
-  background-image: url(https://s3.amazonaws.com/soothsayr/background.jpg);
+  background-image: url(http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510947906/backgrounds/background.jpg);
   font-family: 'IM Fell English SC', serif;
   color: #F0F0F0;
 }
@@ -284,4 +284,9 @@ a.li {
 
 .show-reading {
   margin: 30px 30px 60px 30px;
+}
+
+#deck-select {
+  margin-right: 20%;
+  margin-left: 20%;
 }
