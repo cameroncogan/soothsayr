@@ -167,19 +167,13 @@ class App extends React.Component {
     let deckChoiceCards = this.state.deckChoiceCards;
     let cards = this.state.cards;
     let deckChoice = this.state.deckChoice;
-    let deckGrouping;
-    if ( deckChoice === 1 ) {
-      deckGrouping = "MorganGreer/"
-    } else {
-      deckGrouping = "Steampunk/"
-    };
     let deckChoiceWithExtension = deckChoice += ".png";
     let imagesToPreload = [];
     for (let card of deckChoiceCards) {
-      imagesToPreload.push("http://http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/" + deckGrouping + card.image_path)
+      imagesToPreload.push("http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/cards/" + card.image_path)
     };
     for (let card of cards) {
-      imagesToPreload.push("http://http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/" + deckGrouping + card.image_path + "_" + deckChoiceWithExtension)
+      imagesToPreload.push("http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/cards/" + card.image_path + "_" + deckChoiceWithExtension)
     };
    imagesToPreload.map(src => {
      let image = new Image()

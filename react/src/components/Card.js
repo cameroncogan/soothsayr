@@ -8,11 +8,9 @@ function Card(props) {
   let onClick = () => props.onClick(id);
   let image_path;
   if (deckStage === 1) {
-    image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path;
-  } else if (deckChoice === 3) {
-    image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path + "_" + deckChoice + ".jpg"
+    image_path = "http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/cards/" + props.image_path;
   } else {
-    image_path = "http://s3.amazonaws.com/soothsayr/" + props.image_path + "_" + deckChoice + ".png"
+    image_path = "http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/cards/" + props.image_path + "_" + deckChoice + ".png"
   };
   let storyArray = [2, 4, 6, 8];
   let deckChoiceClass = 'card-sum col-md-3 col-centered';
