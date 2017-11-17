@@ -13,7 +13,7 @@
 <div class='container'>
   <div class='row card-container row-centered show-reading'>
     <% @cards.each do |card| %>
-      <%= image_tag("http://s3.amazonaws.com/soothsayr/" + card.image_path, { class: 'col-lg-3 col-centered card-sum'})%>
+      <%= image_tag("http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/cards/" + card.image_path + "_" + @user.deck.to_s + ".png", { class: 'col-sm-3 col-centered card-sum'})%>
     <% end %>
   </div>
 </div>
