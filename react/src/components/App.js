@@ -33,11 +33,6 @@ class App extends React.Component {
           id: 2,
           image_path: '08_strength_2.png',
           name: 'Steampunk'
-        },
-        {
-          id: 3,
-          image_path: '08_strength_3.jpg',
-          name: 'Rider-Waite'
         }
       ],
       userId: null
@@ -172,17 +167,19 @@ class App extends React.Component {
     let deckChoiceCards = this.state.deckChoiceCards;
     let cards = this.state.cards;
     let deckChoice = this.state.deckChoice;
-    if (deckChoice === 3) {
-      deckChoice += ".jpg"
+    let deckGrouping;
+    if ( deckChoice === 1 ) {
+      deckGrouping = "MorganGreer/"
     } else {
-      deckChoice += ".png"
+      deckGrouping = "Steampunk/"
     };
+    let deckChoiceWithExtension = deckChoice += ".png";
     let imagesToPreload = [];
     for (let card of deckChoiceCards) {
-      imagesToPreload.push("http://s3.amazonaws.com/soothsayr/" + card.image_path)
+      imagesToPreload.push("http://http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/" + deckGrouping + card.image_path)
     };
     for (let card of cards) {
-      imagesToPreload.push("http://s3.amazonaws.com/soothsayr/" + card.image_path + "_" + deckChoice)
+      imagesToPreload.push("http://http://res.cloudinary.com/dd3qqoc9s/image/upload/v1510879875/" + deckGrouping + card.image_path + "_" + deckChoiceWithExtension)
     };
    imagesToPreload.map(src => {
      let image = new Image()
