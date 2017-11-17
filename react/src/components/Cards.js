@@ -26,7 +26,7 @@ const Cards = props => {
   if (deckStage === 1) {
     return (
       <div className='container'>
-        <div className='row row-centered'>
+        <div id="deck-select" className='row row-centered'>
           <ul>
             <ReactCSSTransitionGroup
               transitionName="example"

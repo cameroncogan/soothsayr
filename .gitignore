@@ -23,3 +23,5 @@
 /react/coverage
 plans.md
 pseudocode.md
+secrets.yml
+/config/secrets.yml
