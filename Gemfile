@@ -10,6 +10,7 @@ gem 'devise'
 gem 'dotenv'
 gem 'dotenv-rails'
 gem 'rubocop'
+gem 'cloudinary'
 
 
 group :development, :test do
